@@ -31,7 +31,7 @@ class PersonRepositoryH2Test {
 
         // Then
         assertThat(foundPersons).hasSize(1);
-        assertThat(foundPersons.get(0).getFirstName()).isEqualTo("John");
+        assertThat(foundPersons.getFirst().getFirstName()).isEqualTo("John");
     }
 
     // Example to use @Sql annotation
@@ -45,7 +45,7 @@ class PersonRepositoryH2Test {
 
         // Then
         assertThat(foundPersons).hasSize(1);
-        assertThat(foundPersons.get(0).getFirstName()).isEqualTo("John");
+        assertThat(foundPersons.getFirst().getFirstName()).isEqualTo("John");
     }
 }
 

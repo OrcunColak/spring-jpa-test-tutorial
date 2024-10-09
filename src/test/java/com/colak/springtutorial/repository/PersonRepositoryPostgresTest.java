@@ -22,6 +22,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 // Disable the transactional and roll back in @DataJpaTest
 @Transactional(propagation = Propagation.NOT_SUPPORTED)
 // Disable H2
+// See https://erkanyasun.medium.com/a-deep-dive-into-the-latest-spring-boot-3-4-0-m3-52ca7e03db2d
+// With 3.4.0-M3 the @AutoConfigureTestDatabase annotation has been upgraded to automatically detect if a database is sourced from a container.
+// Previously, using @AutoConfigureTestDatabase with containerized databases required the replace=Replace.NONE attribute.
+// With this release, this manual configuration is no longer necessary, simplifying your test setup.
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Testcontainers
 class PersonRepositoryPostgresTest {
