@@ -1,6 +1,6 @@
-package com.colak.springjpatesttutorial.repository;
+package com.colak.springtutorial.repository;
 
-import com.colak.springjpatesttutorial.jpa.Person;
+import com.colak.springtutorial.jpa.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
